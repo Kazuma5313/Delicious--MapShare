@@ -7,6 +7,7 @@ import {
   MapPin,
   Heart,
   Utensils,
+  Images,
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -55,9 +56,16 @@ export function Header({ onOpenShare }: HeaderProps) {
             <Book size={18} />
             <span>思い出</span>
           </button>
+          <button
+            className={`view-button ${viewMode === 'compare' ? 'active' : ''}`}
+            onClick={() => setViewMode('compare')}
+          >
+            <Images size={18} />
+            <span>比較</span>
+          </button>
         </div>
 
-        {viewMode !== 'memories' && (
+        {viewMode !== 'memories' && viewMode !== 'compare' && (
           <div className="filter-toggle">
             <button
               className={`filter-button ${filter === 'all' ? 'active' : ''}`}

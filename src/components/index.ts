@@ -6,3 +6,4 @@ export { RestaurantForm } from './RestaurantForm';
 export { RestaurantDetail } from './RestaurantDetail';
 export { MemoriesBook } from './MemoriesBook';
 export { ShareModal } from './ShareModal';
+export { PhotoComparison } from './PhotoComparison';

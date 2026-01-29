@@ -8,6 +8,7 @@ import {
   RestaurantDetail,
   MemoriesBook,
   ShareModal,
+  PhotoComparison,
 } from './components';
 import type { Restaurant } from './types';
 import './App.css';
@@ -65,6 +66,12 @@ function App() {
         {viewMode === 'memories' && (
           <div className="memories-container">
             <MemoriesBook onSelectRestaurant={handleSelectRestaurant} />
+          </div>
+        )}
+
+        {viewMode === 'compare' && (
+          <div className="compare-container">
+            <PhotoComparison />
           </div>
         )}
       </main>

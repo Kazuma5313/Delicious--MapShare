@@ -44,7 +44,16 @@ export interface ShareData {
   message?: string;
 }
 
-export type ViewMode = 'map' | 'list' | 'memories';
+export type ViewMode = 'map' | 'list' | 'memories' | 'compare';
+
+export interface ComparePhoto {
+  id: string;
+  url: string;
+  name: string;
+  wins: number;
+  losses: number;
+  score: number;
+}
 
 export type FilterType = 'all' | 'visited' | 'wantToGo';
 
